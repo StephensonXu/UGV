@@ -120,13 +120,65 @@
   <metadata name="Dog_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="axVLCPlugin21.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAgwEAAAIB
+        AAAAAQAAAAAAAAAAAAAAAG4BAAAHAAAAKABDAG8AdQBuAHQAKQADAA0AAAAIAAAAQQB1AHQAbwBMAG8A
+        bwBwAAsAAAAIAAAAQQB1AHQAbwBQAGwAYQB5AAsA//8JAAAAQgBhAGMAawBDAG8AbABvAHIAAwAAAAAA
+        BwAAAEIAYQBzAGUAVQBSAEwACAAAAAAACAAAAEIAcgBhAG4AZABpAG4AZwALAP//DAAAAEUAeAB0AGUA
+        bgB0AEgAZQBpAGcAaAB0AAMAzhgAAAsAAABFAHgAdABlAG4AdABXAGkAZAB0AGgAAwATIQAAEQAAAEYA
+        dQBsAGwAcwBjAHIAZQBlAG4ARQBuAGEAYgBsAGUAZAALAP//AwAAAE0AUgBMAAgAAAAAAAkAAABTAHQA
+        YQByAHQAVABpAG0AZQADAAAAAAAHAAAAVABvAG8AbABiAGEAcgALAP//BwAAAFYAaQBzAGkAYgBsAGUA
+        CwD//wYAAABWAG8AbAB1AG0AZQADADIAAAAL
+</value>
+  </data>
+  <metadata name="Video.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Video.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AqcKKqkN6JE/AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAgEAAAAAAAD/4QDgRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAExAAIAAAAV

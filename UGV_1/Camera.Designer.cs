@@ -62,10 +62,10 @@
             // axVLCPlugin
             // 
             this.axVLCPlugin.Enabled = true;
-            this.axVLCPlugin.Location = new System.Drawing.Point(0, 0);
+            this.axVLCPlugin.Location = new System.Drawing.Point(500, 0);
             this.axVLCPlugin.Name = "axVLCPlugin";
             this.axVLCPlugin.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVLCPlugin.OcxState")));
-            this.axVLCPlugin.Size = new System.Drawing.Size(1365, 768);
+            this.axVLCPlugin.Size = new System.Drawing.Size(666, 768);
             this.axVLCPlugin.TabIndex = 22;
             this.axVLCPlugin.Visible = false;
             // 

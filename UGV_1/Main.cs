@@ -62,7 +62,7 @@ namespace UGV_1
         private int flagDog = 0;
         private int ConLostCnt = 0;
         //显示其他窗体及初始化通信客户端类
-        Camera camera=new Camera();
+        //Camera camera=new Camera();
         CarCon carControl=new CarCon();
         ArmCon armControl=new ArmCon();
         EmergencyStop emergencyStop=new EmergencyStop();
@@ -92,12 +92,14 @@ namespace UGV_1
                 ScaleFactor = (float)iActualHeight / ScreenRefHeigh;
             }
             ScreenZoom(ScaleFactor);
-                             
-            camera.Show();            
+            //摄像头界面
+            axVLCPlugin21.Size = new Size(iActualWidth, iActualHeight);
+            axVLCPlugin21.Hide();     
+            //camera.Show();            
             carControl.Show();
             armControl.Show();
             emergencyStop.Show();
-            camera.TopMost = true;
+            //camera.TopMost = true;
             //事件注册
             carControl.Dogtimer+=new Timedelegate(StartTimer);
             carControl.SetMoveflag+=new SetMoveflagdelegate(SetMoveflag);
@@ -130,10 +132,10 @@ namespace UGV_1
             armControl.MoveCodeClr += new MoveCodeClrdelegate(MoveCodeClr);
             armControl.ModeCodeWrt += new ModeCodeWrtdelegate(ModeCodeWrt);
             armControl.MoveCodeWrt += new MoveCodeWrtdelegate(MoveCodeWrt);
-            camera.Dogtimer += new Timedelegate(StartTimer);
-            camera.MoveCodeClr += new MoveCodeClrdelegate(MoveCodeClr);
-            camera.ModeCodeWrt += new ModeCodeWrtdelegate(ModeCodeWrt);
-            camera.MoveCodeWrt += new MoveCodeWrtdelegate(MoveCodeWrt);
+            //camera.Dogtimer += new Timedelegate(StartTimer);
+            //camera.MoveCodeClr += new MoveCodeClrdelegate(MoveCodeClr);
+            //camera.ModeCodeWrt += new ModeCodeWrtdelegate(ModeCodeWrt);
+            //camera.MoveCodeWrt += new MoveCodeWrtdelegate(MoveCodeWrt);
             //开启通信
             tcpClient.Start();
             //不清空并写日志
@@ -202,11 +204,11 @@ namespace UGV_1
                     {
                         ConLostCnt++;
                         myLog.WriteLog("丢失数", ConLostCnt.ToString());
-                        if (ConLostCnt >= 20)
+                        if (ConLostCnt >= 10)
                         {
-                            myLog.WriteLog("丢失数大于20，通信中断", ConLostCnt.ToString());
                             Dog_timer.Enabled = false; //关闭关门狗,并显示尝试重新连接标语
                             lost.ShowDialog();
+                            myLog.WriteLog("丢失数大于10，通信中断", ConLostCnt.ToString());                
                         }
                     }
                     else
@@ -374,6 +376,34 @@ namespace UGV_1
         private void ScreenZoom(float factor)
         {
             this.Scale(factor);
+        }
+
+        private void Video_Click(object sender, EventArgs e)
+        {
+            if (Video.BackColor == Color.Transparent)
+            {
+                StartTimer();
+                ModeCodeWrt(0x40);
+                MoveCodeClr();
+                Video.BackColor = Color.Chartreuse;
+                axVLCPlugin21.Visible = true;
+                axVLCPlugin21.SendToBack();
+                this.SendToBack();
+                this.BringToFront();
+                axVLCPlugin21.playlist.add("udp://@:8888");
+                axVLCPlugin21.playlist.play();
+            }
+            else
+            {
+                ModeCodeWrt(0x41);
+                MoveCodeClr();
+                Video.BackColor = Color.Transparent;
+                axVLCPlugin21.Visible = false;
+                this.SendToBack();
+                this.BringToFront();
+                axVLCPlugin21.playlist.stop();
+                //VideoClose();
+            }
         }
     }
 }
