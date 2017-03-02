@@ -305,6 +305,7 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(0);
+                    MoveCodeWrt(new byte[] {0,0,0});
                     //显示转盘界面，隐藏臂界面
                     CarICON.BackColor = Color.Chartreuse;
                     //显示高速选项及原地转选项
@@ -346,11 +347,13 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(4);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                 }
                 else//默认低速旋转，即使不按低速选项
                 {
                     //写入模式位
                     ModeCodeWrt(3);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                 }               
                 Rotate.BackColor = Color.Chartreuse;
                 Carcontrolflag = 2;
@@ -361,19 +364,21 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(2);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 1;
                 }
                 else if (LowSpeed.BackColor == Color.Chartreuse)
                 {
                     //写入模式位
                     ModeCodeWrt(1);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 1;
                 }
                 else
                 {
                     //写入模式位
                     ModeCodeWrt(0);
-                    MoveCodeClr();
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 4;
                 }               
                 Rotate.BackColor = Color.Transparent;
@@ -389,12 +394,14 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(2);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 1;
                 }
                 else
                 {
                     //写入模式位
                     ModeCodeWrt(4);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 2;
                 }
             }
@@ -405,13 +412,14 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(0);
-                    MoveCodeClr();
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 4;
                 }
                 else
                 {
                     //写入模式位
                     ModeCodeWrt(3);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 2;
                 }
             }
@@ -427,12 +435,14 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(1);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 1;
                 }
                 else
                 {
                     //写入模式位
                     ModeCodeWrt(3);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 2;
                 }
 
@@ -444,13 +454,14 @@ namespace UGV_1
                 {
                     //写入模式位
                     ModeCodeWrt(0);
-                    MoveCodeClr();
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 4;
                 }
                 else
                 {
                     //写入模式位
                     ModeCodeWrt(3);
+                    MoveCodeWrt(new byte[] { 0, 0, 0 });
                     Carcontrolflag = 2;
                 }
             }
